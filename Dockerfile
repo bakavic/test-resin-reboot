@@ -11,4 +11,4 @@ RUN sed -i '/^data_directory*/ s|/var/lib/postgresql/9.4/main|/data/db/|' /etc/p
 
 RUN systemctl enable postgresql.service
 
-CMD ["bash", "while true; do echo 'wait'; sleep 10; done"]
+CMD ["bash", "-c", "while true; do echo 'wait'; sleep 10; done"]
